@@ -32,13 +32,14 @@
             LoginBox1 = new TextBox();
             PasswordBox1 = new TextBox();
             LoginLabel = new Label();
-            PasswordLabel = new Label();
             signInBtn = new Button();
             espegicLogo = new PictureBox();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            helpProvider1 = new HelpProvider();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)espegicLogo).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -47,10 +48,11 @@
             // 
             LoginBox1.AccessibleDescription = "";
             LoginBox1.AccessibleName = "login";
-            LoginBox1.Location = new Point(285, 316);
+            LoginBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LoginBox1.Location = new Point(261, 319);
             LoginBox1.Margin = new Padding(4);
             LoginBox1.Name = "LoginBox1";
-            LoginBox1.Size = new Size(195, 34);
+            LoginBox1.Size = new Size(234, 34);
             LoginBox1.TabIndex = 0;
             LoginBox1.Tag = "";
             // 
@@ -58,42 +60,34 @@
             // 
             PasswordBox1.AccessibleDescription = "";
             PasswordBox1.AccessibleName = "password";
-            PasswordBox1.Location = new Point(285, 383);
+            PasswordBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PasswordBox1.Location = new Point(261, 382);
             PasswordBox1.Margin = new Padding(4);
             PasswordBox1.Name = "PasswordBox1";
-            PasswordBox1.Size = new Size(195, 34);
+            PasswordBox1.Size = new Size(234, 34);
             PasswordBox1.TabIndex = 1;
             PasswordBox1.UseSystemPasswordChar = true;
             // 
             // LoginLabel
             // 
             LoginLabel.AccessibleDescription = "login label";
+            LoginLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             LoginLabel.AutoSize = true;
-            LoginLabel.Location = new Point(285, 291);
+            LoginLabel.Location = new Point(261, 294);
             LoginLabel.Margin = new Padding(4, 0, 4, 0);
             LoginLabel.Name = "LoginLabel";
             LoginLabel.Size = new Size(65, 28);
             LoginLabel.TabIndex = 1;
             LoginLabel.Text = "Login:";
             // 
-            // PasswordLabel
-            // 
-            PasswordLabel.AccessibleDescription = "password label";
-            PasswordLabel.AutoSize = true;
-            PasswordLabel.Location = new Point(285, 358);
-            PasswordLabel.Margin = new Padding(4, 0, 4, 0);
-            PasswordLabel.Name = "PasswordLabel";
-            PasswordLabel.Size = new Size(133, 28);
-            PasswordLabel.TabIndex = 1;
-            PasswordLabel.Text = "Mot de passe:";
-            // 
             // signInBtn
             // 
+            signInBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             signInBtn.BackColor = SystemColors.GradientActiveCaption;
-            signInBtn.Location = new Point(309, 425);
+            signInBtn.Location = new Point(261, 440);
             signInBtn.Margin = new Padding(4);
             signInBtn.Name = "signInBtn";
-            signInBtn.Size = new Size(146, 46);
+            signInBtn.Size = new Size(234, 42);
             signInBtn.TabIndex = 2;
             signInBtn.Text = "s'authentifier";
             signInBtn.UseVisualStyleBackColor = false;
@@ -101,8 +95,9 @@
             // 
             // espegicLogo
             // 
+            espegicLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             espegicLogo.Image = (Image)resources.GetObject("espegicLogo.Image");
-            espegicLogo.Location = new Point(261, 161);
+            espegicLogo.Location = new Point(261, 160);
             espegicLogo.Margin = new Padding(4);
             espegicLogo.Name = "espegicLogo";
             espegicLogo.Size = new Size(234, 109);
@@ -141,20 +136,34 @@
             aboutToolStripMenuItem.Size = new Size(64, 24);
             aboutToolStripMenuItem.Text = "&About";
             // 
+            // label1
+            // 
+            label1.AccessibleDescription = "login label";
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Location = new Point(261, 357);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 28);
+            label1.TabIndex = 5;
+            label1.Text = "Mot de passe:";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(772, 639);
+            Controls.Add(label1);
             Controls.Add(espegicLogo);
             Controls.Add(signInBtn);
-            Controls.Add(PasswordLabel);
             Controls.Add(LoginLabel);
             Controls.Add(PasswordBox1);
             Controls.Add(LoginBox1);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
             Name = "LoginForm";
@@ -172,12 +181,13 @@
         private TextBox LoginBox1;
         private TextBox PasswordBox1;
         private Label LoginLabel;
-        private Label PasswordLabel;
         private Button signInBtn;
         private PictureBox espegicLogo;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private HelpProvider helpProvider1;
+        private Label label1;
     }
 }

@@ -48,6 +48,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Location = new Point(380, 76);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Recherché élève par nom";
@@ -56,6 +57,7 @@
             // 
             // ExportEleve
             // 
+            ExportEleve.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ExportEleve.Location = new Point(51, 500);
             ExportEleve.Name = "ExportEleve";
             ExportEleve.Size = new Size(194, 44);
@@ -65,6 +67,7 @@
             // 
             // SupprinerEleve
             // 
+            SupprinerEleve.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SupprinerEleve.BackColor = Color.IndianRed;
             SupprinerEleve.ForeColor = Color.White;
             SupprinerEleve.Location = new Point(276, 500);
@@ -76,6 +79,7 @@
             // 
             // AjouterBtn
             // 
+            AjouterBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             AjouterBtn.BackColor = SystemColors.GradientActiveCaption;
             AjouterBtn.Location = new Point(499, 500);
             AjouterBtn.Name = "AjouterBtn";
@@ -83,13 +87,14 @@
             AjouterBtn.TabIndex = 10;
             AjouterBtn.Text = "Ajouter un élève";
             AjouterBtn.UseVisualStyleBackColor = false;
-            AjouterBtn.Click += button1_Click;
+            AjouterBtn.Click += AjouterEleve_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fullName, moyenne, moisNonPaye, modifierEleve });
@@ -148,14 +153,14 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(201, 26);
+            exitToolStripMenuItem.Size = new Size(224, 26);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // parcourirClassesToolStripMenuItem
             // 
             parcourirClassesToolStripMenuItem.Name = "parcourirClassesToolStripMenuItem";
-            parcourirClassesToolStripMenuItem.Size = new Size(201, 26);
+            parcourirClassesToolStripMenuItem.Size = new Size(224, 26);
             parcourirClassesToolStripMenuItem.Text = "&Parcourir Classes";
             parcourirClassesToolStripMenuItem.Click += parcourirClassesToolStripMenuItem_Click;
             // 

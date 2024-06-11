@@ -21,13 +21,9 @@ namespace scoreBill
         {
             CreateClasseForm createClasseForm = new();
             createClasseForm.Show();
-            this.Visible = false;
+            this.Close();
         }
 
-        private void SupprimerClasseClick(object sender, EventArgs e)
-        {
-
-        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {

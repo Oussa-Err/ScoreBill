@@ -8,7 +8,11 @@ namespace scoreBill.Models
 {
     public class AdminModel
     {
-        public  string Login { get; set; }
-        public  string Password { get; set; }
+        private string login;
+        private string password;
+
+        // propreties and validation
+        public string Login { get => login; set => login = value; }
+        public string Password { get => password; set => password = value; }
     }
 }

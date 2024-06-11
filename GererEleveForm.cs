@@ -22,14 +22,17 @@ namespace scoreBill
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AjouterEleve_Click(object sender, EventArgs e)
         {
+            CreateEleveForm createEleveForm = new();
+            createEleveForm.Show();
+            this.Close();
 
         }
 
         private void parcourirClassesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GererClasseForm getClassesForm = new ();
+            GererClasseForm getClassesForm = new();
             getClassesForm.Show();
             this.Close();
         }

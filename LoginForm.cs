@@ -19,7 +19,8 @@ namespace scoreBill
             if (PasswordBox1.Text == "" || LoginBox1.Text == "")
             {
                 MessageBox.Show("login et/ou mot de passe vide\n", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else
+            }
+            else
             {
                 LoginPresenter presenter = new();
                 presenter.logUser(this);
@@ -36,5 +37,6 @@ namespace scoreBill
         {
             Application.Exit();
         }
+
     }
 }

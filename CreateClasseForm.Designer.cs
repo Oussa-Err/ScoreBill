@@ -81,6 +81,7 @@
             // 
             // CreateClasseBtn
             // 
+            CreateClasseBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CreateClasseBtn.BackColor = SystemColors.GradientActiveCaption;
             CreateClasseBtn.Location = new Point(469, 513);
             CreateClasseBtn.Name = "CreateClasseBtn";
@@ -92,6 +93,7 @@
             // 
             // AnnulerBtn
             // 
+            AnnulerBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             AnnulerBtn.BackColor = Color.IndianRed;
             AnnulerBtn.ForeColor = Color.White;
             AnnulerBtn.Location = new Point(92, 513);
@@ -104,6 +106,7 @@
             // 
             // NomClasse
             // 
+            NomClasse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NomClasse.Location = new Point(422, 102);
             NomClasse.Name = "NomClasse";
             NomClasse.Size = new Size(211, 34);
@@ -111,6 +114,7 @@
             // 
             // NomClasseLabel
             // 
+            NomClasseLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NomClasseLabel.AutoSize = true;
             NomClasseLabel.Location = new Point(92, 102);
             NomClasseLabel.Name = "NomClasseLabel";
@@ -120,6 +124,7 @@
             // 
             // NomMatiereLabel
             // 
+            NomMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NomMatiereLabel.AutoSize = true;
             NomMatiereLabel.Location = new Point(92, 162);
             NomMatiereLabel.Name = "NomMatiereLabel";
@@ -129,6 +134,7 @@
             // 
             // NomsMatiere
             // 
+            NomsMatiere.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NomsMatiere.Location = new Point(422, 162);
             NomsMatiere.Name = "NomsMatiere";
             NomsMatiere.Size = new Size(211, 34);
@@ -136,6 +142,7 @@
             // 
             // NbrMatiereLabel
             // 
+            NbrMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NbrMatiereLabel.AutoSize = true;
             NbrMatiereLabel.Location = new Point(92, 227);
             NbrMatiereLabel.Name = "NbrMatiereLabel";
@@ -145,6 +152,7 @@
             // 
             // NbrMatiere
             // 
+            NbrMatiere.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NbrMatiere.Location = new Point(422, 227);
             NbrMatiere.Name = "NbrMatiere";
             NbrMatiere.Size = new Size(211, 34);
@@ -152,6 +160,7 @@
             // 
             // NbrMoisLabel
             // 
+            NbrMoisLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NbrMoisLabel.AutoSize = true;
             NbrMoisLabel.Location = new Point(92, 288);
             NbrMoisLabel.Name = "NbrMoisLabel";
@@ -161,6 +170,7 @@
             // 
             // NbrMois
             // 
+            NbrMois.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             NbrMois.Location = new Point(422, 285);
             NbrMois.Name = "NbrMois";
             NbrMois.Size = new Size(211, 34);
@@ -168,6 +178,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Location = new Point(92, 351);
             label1.Name = "label1";
@@ -177,6 +188,7 @@
             // 
             // FraisInitial
             // 
+            FraisInitial.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FraisInitial.Location = new Point(422, 348);
             FraisInitial.Name = "FraisInitial";
             FraisInitial.Size = new Size(211, 34);
@@ -184,6 +196,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Location = new Point(92, 414);
             label2.Name = "label2";
@@ -193,6 +206,7 @@
             // 
             // FraisMensuel
             // 
+            FraisMensuel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FraisMensuel.Location = new Point(422, 411);
             FraisMensuel.Name = "FraisMensuel";
             FraisMensuel.Size = new Size(211, 34);

@@ -44,8 +44,9 @@
             // 
             // ajouterClasseBtn
             // 
+            ajouterClasseBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ajouterClasseBtn.BackColor = SystemColors.GradientActiveCaption;
-            ajouterClasseBtn.Location = new Point(556, 461);
+            ajouterClasseBtn.Location = new Point(546, 461);
             ajouterClasseBtn.Margin = new Padding(4);
             ajouterClasseBtn.Name = "ajouterClasseBtn";
             ajouterClasseBtn.Size = new Size(165, 53);
@@ -56,16 +57,16 @@
             // 
             // SupprimerClasseBtn
             // 
+            SupprimerClasseBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SupprimerClasseBtn.BackColor = Color.IndianRed;
             SupprimerClasseBtn.ForeColor = Color.White;
-            SupprimerClasseBtn.Location = new Point(64, 461);
+            SupprimerClasseBtn.Location = new Point(54, 461);
             SupprimerClasseBtn.Margin = new Padding(4);
             SupprimerClasseBtn.Name = "SupprimerClasseBtn";
             SupprimerClasseBtn.Size = new Size(210, 53);
             SupprimerClasseBtn.TabIndex = 1;
             SupprimerClasseBtn.Text = "Supprimer Classe";
             SupprimerClasseBtn.UseVisualStyleBackColor = false;
-            SupprimerClasseBtn.Click += SupprimerClasseClick;
             // 
             // dataGridView1
             // 
@@ -75,7 +76,7 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nomDeLaClasse, nbrEleve, accessClasse });
-            dataGridView1.Location = new Point(64, 134);
+            dataGridView1.Location = new Point(54, 134);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(657, 320);
