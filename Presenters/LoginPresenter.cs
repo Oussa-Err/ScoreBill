@@ -19,8 +19,8 @@ namespace scoreBill.Presenters
 
         public void logUser(AdminModel admin)
         {
-            admin.Login1 = loginUser.Login;
-            admin.Password1 = loginUser.Password;
+            admin.Login = loginUser.Login;
+            admin.Password = loginUser.Password;
         }
 
     }

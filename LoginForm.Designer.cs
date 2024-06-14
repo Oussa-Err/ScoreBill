@@ -48,11 +48,11 @@
             // 
             LoginBox1.AccessibleDescription = "";
             LoginBox1.AccessibleName = "login";
-            LoginBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            LoginBox1.Location = new Point(261, 319);
+            LoginBox1.Anchor = AnchorStyles.None;
+            LoginBox1.Location = new Point(218, 304);
             LoginBox1.Margin = new Padding(4);
             LoginBox1.Name = "LoginBox1";
-            LoginBox1.Size = new Size(234, 34);
+            LoginBox1.Size = new Size(219, 34);
             LoginBox1.TabIndex = 0;
             LoginBox1.Tag = "";
             // 
@@ -60,20 +60,20 @@
             // 
             PasswordBox1.AccessibleDescription = "";
             PasswordBox1.AccessibleName = "password";
-            PasswordBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            PasswordBox1.Location = new Point(261, 382);
+            PasswordBox1.Anchor = AnchorStyles.None;
+            PasswordBox1.Location = new Point(218, 367);
             PasswordBox1.Margin = new Padding(4);
             PasswordBox1.Name = "PasswordBox1";
-            PasswordBox1.Size = new Size(234, 34);
+            PasswordBox1.Size = new Size(219, 34);
             PasswordBox1.TabIndex = 1;
             PasswordBox1.UseSystemPasswordChar = true;
             // 
             // LoginLabel
             // 
             LoginLabel.AccessibleDescription = "login label";
-            LoginLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LoginLabel.Anchor = AnchorStyles.None;
             LoginLabel.AutoSize = true;
-            LoginLabel.Location = new Point(261, 294);
+            LoginLabel.Location = new Point(218, 279);
             LoginLabel.Margin = new Padding(4, 0, 4, 0);
             LoginLabel.Name = "LoginLabel";
             LoginLabel.Size = new Size(65, 28);
@@ -82,12 +82,12 @@
             // 
             // signInBtn
             // 
-            signInBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            signInBtn.Anchor = AnchorStyles.None;
             signInBtn.BackColor = SystemColors.GradientActiveCaption;
-            signInBtn.Location = new Point(261, 440);
+            signInBtn.Location = new Point(218, 425);
             signInBtn.Margin = new Padding(4);
             signInBtn.Name = "signInBtn";
-            signInBtn.Size = new Size(234, 42);
+            signInBtn.Size = new Size(219, 51);
             signInBtn.TabIndex = 2;
             signInBtn.Text = "s'authentifier";
             signInBtn.UseVisualStyleBackColor = false;
@@ -95,12 +95,12 @@
             // 
             // espegicLogo
             // 
-            espegicLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            espegicLogo.Anchor = AnchorStyles.None;
             espegicLogo.Image = (Image)resources.GetObject("espegicLogo.Image");
-            espegicLogo.Location = new Point(261, 160);
+            espegicLogo.Location = new Point(218, 129);
             espegicLogo.Margin = new Padding(4);
             espegicLogo.Name = "espegicLogo";
-            espegicLogo.Size = new Size(234, 109);
+            espegicLogo.Size = new Size(219, 137);
             espegicLogo.SizeMode = PictureBoxSizeMode.CenterImage;
             espegicLogo.TabIndex = 3;
             espegicLogo.TabStop = false;
@@ -112,7 +112,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(772, 30);
+            menuStrip1.Size = new Size(663, 30);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -139,9 +139,9 @@
             // label1
             // 
             label1.AccessibleDescription = "login label";
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(261, 357);
+            label1.Location = new Point(218, 342);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(133, 28);
@@ -154,21 +154,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(772, 639);
+            ClientSize = new Size(663, 573);
+            ControlBox = false;
             Controls.Add(label1);
             Controls.Add(espegicLogo);
             Controls.Add(signInBtn);
-            Controls.Add(LoginLabel);
-            Controls.Add(PasswordBox1);
-            Controls.Add(LoginBox1);
             Controls.Add(menuStrip1);
+            Controls.Add(LoginLabel);
+            Controls.Add(LoginBox1);
+            Controls.Add(PasswordBox1);
             Font = new Font("Segoe UI", 12F);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
+            MinimumSize = new Size(685, 624);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "Authentification";
             ((System.ComponentModel.ISupportInitialize)espegicLogo).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -189,5 +191,6 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private HelpProvider helpProvider1;
         private Label label1;
+        private Panel panel1;
     }
 }

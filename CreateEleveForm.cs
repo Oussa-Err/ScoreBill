@@ -17,20 +17,11 @@ namespace scoreBill
             InitializeComponent();
         }
 
-
-
         private void AnnulerBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             GererEleveForm gererEleveForm = new();
             gererEleveForm.Show();
-        }
-
-        private void EnregistrerBtn_Click(object sender, EventArgs e)
-        {
-            ModifierEleveForm modifierEleveForm = new();
-            modifierEleveForm.Show();
-            this.Close();
         }
 
         private void parcourirClassesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +40,13 @@ namespace scoreBill
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void EnregistrerBtn_Click(object sender, EventArgs e)
+        {
+            ModifierEleveForm modifierEleveForm = new();
+            modifierEleveForm.Show();
+            this.Close();
         }
     }
 }

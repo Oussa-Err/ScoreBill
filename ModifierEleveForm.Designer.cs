@@ -58,6 +58,7 @@
             parcourirClassesToolStripMenuItem = new ToolStripMenuItem();
             parcourirElevesToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            EnregistrerBtn = new Button();
             InformationGeneraleGroupBox.SuspendLayout();
             ExamensGroupBox.SuspendLayout();
             PaimentGroupBox.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // InformationGeneraleGroupBox
             // 
+            InformationGeneraleGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             InformationGeneraleGroupBox.Controls.Add(dateInscriptionPicker);
             InformationGeneraleGroupBox.Controls.Add(NomBox);
             InformationGeneraleGroupBox.Controls.Add(PrenomBox);
@@ -75,17 +77,18 @@
             InformationGeneraleGroupBox.Controls.Add(Classes);
             InformationGeneraleGroupBox.Enabled = false;
             InformationGeneraleGroupBox.Font = new Font("Segoe UI", 15F);
-            InformationGeneraleGroupBox.Location = new Point(93, 84);
+            InformationGeneraleGroupBox.Location = new Point(93, 51);
             InformationGeneraleGroupBox.Name = "InformationGeneraleGroupBox";
-            InformationGeneraleGroupBox.Size = new Size(770, 212);
-            InformationGeneraleGroupBox.TabIndex = 32;
+            InformationGeneraleGroupBox.Size = new Size(830, 212);
+            InformationGeneraleGroupBox.TabIndex = 1;
             InformationGeneraleGroupBox.TabStop = false;
             InformationGeneraleGroupBox.Text = "Information Générale :";
             // 
             // dateInscriptionPicker
             // 
+            dateInscriptionPicker.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateInscriptionPicker.Font = new Font("Segoe UI", 11F);
-            dateInscriptionPicker.Location = new Point(441, 158);
+            dateInscriptionPicker.Location = new Point(501, 158);
             dateInscriptionPicker.Name = "dateInscriptionPicker";
             dateInscriptionPicker.Size = new Size(323, 32);
             dateInscriptionPicker.TabIndex = 5;
@@ -96,22 +99,22 @@
             NomBox.Location = new Point(19, 70);
             NomBox.Name = "NomBox";
             NomBox.PlaceholderText = "Nom";
-            NomBox.Size = new Size(129, 34);
+            NomBox.Size = new Size(151, 34);
             NomBox.TabIndex = 0;
             // 
             // PrenomBox
             // 
             PrenomBox.Font = new Font("Segoe UI", 12F);
-            PrenomBox.Location = new Point(171, 70);
+            PrenomBox.Location = new Point(187, 70);
             PrenomBox.Name = "PrenomBox";
             PrenomBox.PlaceholderText = "Prenom";
-            PrenomBox.Size = new Size(137, 34);
+            PrenomBox.Size = new Size(151, 34);
             PrenomBox.TabIndex = 1;
             // 
             // AgeBox
             // 
             AgeBox.Font = new Font("Segoe UI", 12F);
-            AgeBox.Location = new Point(342, 70);
+            AgeBox.Location = new Point(354, 70);
             AgeBox.Name = "AgeBox";
             AgeBox.PlaceholderText = "Age";
             AgeBox.Size = new Size(97, 34);
@@ -119,9 +122,10 @@
             // 
             // DateInscriptionLabel
             // 
+            DateInscriptionLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             DateInscriptionLabel.AutoSize = true;
             DateInscriptionLabel.Font = new Font("Segoe UI", 12F);
-            DateInscriptionLabel.Location = new Point(254, 158);
+            DateInscriptionLabel.Location = new Point(314, 158);
             DateInscriptionLabel.Name = "DateInscriptionLabel";
             DateInscriptionLabel.Size = new Size(171, 28);
             DateInscriptionLabel.TabIndex = 10;
@@ -130,10 +134,10 @@
             // TelephoneBox
             // 
             TelephoneBox.Font = new Font("Segoe UI", 12F);
-            TelephoneBox.Location = new Point(600, 70);
+            TelephoneBox.Location = new Point(625, 70);
             TelephoneBox.Name = "TelephoneBox";
             TelephoneBox.PlaceholderText = "Telephone";
-            TelephoneBox.Size = new Size(164, 34);
+            TelephoneBox.Size = new Size(189, 34);
             TelephoneBox.TabIndex = 4;
             // 
             // Classes
@@ -141,24 +145,26 @@
             Classes.Font = new Font("Segoe UI", 12F);
             Classes.FormattingEnabled = true;
             Classes.ItemHeight = 28;
-            Classes.Location = new Point(460, 70);
+            Classes.Location = new Point(469, 70);
             Classes.Name = "Classes";
-            Classes.Size = new Size(125, 32);
+            Classes.Size = new Size(140, 32);
             Classes.TabIndex = 3;
             // 
             // ExamensGroupBox
             // 
+            ExamensGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ExamensGroupBox.Controls.Add(NoteBox3);
             ExamensGroupBox.Controls.Add(MatiereLabel);
             ExamensGroupBox.Controls.Add(MoyenneGeneraleLabel);
             ExamensGroupBox.Controls.Add(SommesNoteLabel);
             ExamensGroupBox.Controls.Add(NoteBox1);
             ExamensGroupBox.Controls.Add(NoteBox2);
+            ExamensGroupBox.Enabled = false;
             ExamensGroupBox.Font = new Font("Segoe UI", 15F);
-            ExamensGroupBox.Location = new Point(93, 314);
+            ExamensGroupBox.Location = new Point(93, 269);
             ExamensGroupBox.Name = "ExamensGroupBox";
-            ExamensGroupBox.Size = new Size(770, 195);
-            ExamensGroupBox.TabIndex = 31;
+            ExamensGroupBox.Size = new Size(830, 195);
+            ExamensGroupBox.TabIndex = 2;
             ExamensGroupBox.TabStop = false;
             ExamensGroupBox.Text = "Notes des Examens :";
             // 
@@ -183,9 +189,10 @@
             // 
             // MoyenneGeneraleLabel
             // 
+            MoyenneGeneraleLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             MoyenneGeneraleLabel.AutoSize = true;
             MoyenneGeneraleLabel.Font = new Font("Segoe UI", 12F);
-            MoyenneGeneraleLabel.Location = new Point(472, 164);
+            MoyenneGeneraleLabel.Location = new Point(532, 164);
             MoyenneGeneraleLabel.Name = "MoyenneGeneraleLabel";
             MoyenneGeneraleLabel.Size = new Size(178, 28);
             MoyenneGeneraleLabel.TabIndex = 16;
@@ -221,24 +228,27 @@
             // 
             // PaimentGroupBox
             // 
+            PaimentGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             PaimentGroupBox.Controls.Add(DueLabel);
             PaimentGroupBox.Controls.Add(FraisCheckBox1);
             PaimentGroupBox.Controls.Add(AjusterMensualiteBox);
             PaimentGroupBox.Controls.Add(FraisInitialCheckBox);
             PaimentGroupBox.Controls.Add(AjusterMensualiteLabel);
+            PaimentGroupBox.Enabled = false;
             PaimentGroupBox.Font = new Font("Segoe UI", 15F);
-            PaimentGroupBox.Location = new Point(93, 515);
+            PaimentGroupBox.Location = new Point(93, 482);
             PaimentGroupBox.Name = "PaimentGroupBox";
-            PaimentGroupBox.Size = new Size(770, 191);
-            PaimentGroupBox.TabIndex = 30;
+            PaimentGroupBox.Size = new Size(830, 191);
+            PaimentGroupBox.TabIndex = 3;
             PaimentGroupBox.TabStop = false;
             PaimentGroupBox.Text = "Frais Scolaire :";
             // 
             // DueLabel
             // 
+            DueLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             DueLabel.AutoSize = true;
             DueLabel.Font = new Font("Segoe UI", 12F);
-            DueLabel.Location = new Point(516, 150);
+            DueLabel.Location = new Point(576, 150);
             DueLabel.Name = "DueLabel";
             DueLabel.Size = new Size(134, 28);
             DueLabel.TabIndex = 23;
@@ -257,8 +267,9 @@
             // 
             // AjusterMensualiteBox
             // 
+            AjusterMensualiteBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             AjusterMensualiteBox.Font = new Font("Segoe UI", 12F);
-            AjusterMensualiteBox.Location = new Point(680, 16);
+            AjusterMensualiteBox.Location = new Point(734, 22);
             AjusterMensualiteBox.Name = "AjusterMensualiteBox";
             AjusterMensualiteBox.PlaceholderText = "900";
             AjusterMensualiteBox.Size = new Size(90, 34);
@@ -277,9 +288,10 @@
             // 
             // AjusterMensualiteLabel
             // 
+            AjusterMensualiteLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             AjusterMensualiteLabel.AutoSize = true;
             AjusterMensualiteLabel.Font = new Font("Segoe UI", 12F);
-            AjusterMensualiteLabel.Location = new Point(483, 16);
+            AjusterMensualiteLabel.Location = new Point(533, 22);
             AjusterMensualiteLabel.Name = "AjusterMensualiteLabel";
             AjusterMensualiteLabel.Size = new Size(201, 28);
             AjusterMensualiteLabel.TabIndex = 21;
@@ -296,24 +308,28 @@
             // 
             // ModifierBtn
             // 
-            ModifierBtn.Location = new Point(734, 33);
+            ModifierBtn.Anchor = AnchorStyles.Bottom;
+            ModifierBtn.Location = new Point(757, 679);
             ModifierBtn.Name = "ModifierBtn";
-            ModifierBtn.Size = new Size(129, 45);
-            ModifierBtn.TabIndex = 28;
+            ModifierBtn.Size = new Size(166, 61);
+            ModifierBtn.TabIndex = 5;
             ModifierBtn.Text = "Modifier";
             ModifierBtn.UseVisualStyleBackColor = true;
-            ModifierBtn.Click += ModifierBtn_Click_1;
+            ModifierBtn.Click += ModifierBtn_Click;
             // 
             // AnnulerBtn
             // 
+            AnnulerBtn.Anchor = AnchorStyles.Bottom;
             AnnulerBtn.BackColor = Color.IndianRed;
             AnnulerBtn.ForeColor = Color.White;
-            AnnulerBtn.Location = new Point(602, 33);
+            AnnulerBtn.Location = new Point(93, 679);
             AnnulerBtn.Name = "AnnulerBtn";
-            AnnulerBtn.Size = new Size(126, 45);
-            AnnulerBtn.TabIndex = 27;
+            AnnulerBtn.Size = new Size(183, 61);
+            AnnulerBtn.TabIndex = 4;
             AnnulerBtn.Text = "Annuler";
             AnnulerBtn.UseVisualStyleBackColor = false;
+            AnnulerBtn.Visible = false;
+            AnnulerBtn.Click += AnnulerBtn_Click;
             // 
             // menuStrip1
             // 
@@ -321,7 +337,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(962, 28);
+            menuStrip1.Size = new Size(1022, 28);
             menuStrip1.TabIndex = 33;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -335,21 +351,23 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(224, 26);
+            exitToolStripMenuItem.Size = new Size(201, 26);
             exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click_1;
             // 
             // parcourirClassesToolStripMenuItem
             // 
             parcourirClassesToolStripMenuItem.Name = "parcourirClassesToolStripMenuItem";
-            parcourirClassesToolStripMenuItem.Size = new Size(224, 26);
+            parcourirClassesToolStripMenuItem.Size = new Size(201, 26);
             parcourirClassesToolStripMenuItem.Text = "&Parcourir Classes";
             parcourirClassesToolStripMenuItem.Click += parcourirClassesToolStripMenuItem_Click;
             // 
             // parcourirElevesToolStripMenuItem
             // 
             parcourirElevesToolStripMenuItem.Name = "parcourirElevesToolStripMenuItem";
-            parcourirElevesToolStripMenuItem.Size = new Size(224, 26);
+            parcourirElevesToolStripMenuItem.Size = new Size(201, 26);
             parcourirElevesToolStripMenuItem.Text = "Parcourir &Eleves";
+            parcourirElevesToolStripMenuItem.Click += parcourirElevesToolStripMenuItem_Click_1;
             // 
             // aboutToolStripMenuItem
             // 
@@ -357,11 +375,23 @@
             aboutToolStripMenuItem.Size = new Size(64, 24);
             aboutToolStripMenuItem.Text = "&About";
             // 
+            // EnregistrerBtn
+            // 
+            EnregistrerBtn.Anchor = AnchorStyles.Bottom;
+            EnregistrerBtn.Location = new Point(757, 679);
+            EnregistrerBtn.Name = "EnregistrerBtn";
+            EnregistrerBtn.Size = new Size(166, 61);
+            EnregistrerBtn.TabIndex = 34;
+            EnregistrerBtn.Text = "Enregistrer";
+            EnregistrerBtn.UseVisualStyleBackColor = true;
+            EnregistrerBtn.Visible = false;
+            EnregistrerBtn.Click += EnregistrerBtn_Click;
+            // 
             // ModifierEleveForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(962, 734);
+            ClientSize = new Size(1022, 771);
             Controls.Add(menuStrip1);
             Controls.Add(InformationGeneraleGroupBox);
             Controls.Add(ExamensGroupBox);
@@ -369,11 +399,13 @@
             Controls.Add(label3);
             Controls.Add(ModifierBtn);
             Controls.Add(AnnulerBtn);
+            Controls.Add(EnregistrerBtn);
             Font = new Font("Segoe UI", 12F);
             Margin = new Padding(4);
+            MinimumSize = new Size(1040, 818);
             Name = "ModifierEleveForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ModifierEleveForm";
+            Text = "Modifier Eleve";
             InformationGeneraleGroupBox.ResumeLayout(false);
             InformationGeneraleGroupBox.PerformLayout();
             ExamensGroupBox.ResumeLayout(false);
@@ -418,5 +450,6 @@
         private ToolStripMenuItem parcourirClassesToolStripMenuItem;
         private ToolStripMenuItem parcourirElevesToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private Button EnregistrerBtn;
     }
 }

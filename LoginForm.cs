@@ -3,11 +3,12 @@ using scoreBill.Views;
 
 namespace scoreBill
 {
-    public partial class LoginForm : Form, ILogin
+    public partial class LoginForm : Form
+        //, ILogin
     {
-        string ILogin.Login { get => LoginBox1.Text; set => LoginBox1.Text = value; }
+        //string ILogin.Login { get => LoginBox1.Text; set => LoginBox1.Text = value; }
 
-        string ILogin.Password { get => PasswordBox1.Text; set => PasswordBox1.Text = value; }
+        //string ILogin.Password { get => PasswordBox1.Text; set => PasswordBox1.Text = value; }
 
         public LoginForm()
         {
@@ -22,8 +23,8 @@ namespace scoreBill
             }
             else
             {
-                LoginPresenter presenter = new();
-                presenter.logUser(this);
+                //LoginPresenter presenter = new();
+                //presenter.logUser(this);
 
                 // montrer GererClasseForm et 
                 GererClasseForm classesForm = new();

@@ -34,7 +34,7 @@
             // InformationGeneraleLabel
             // 
             InformationGeneraleLabel.AutoSize = true;
-            InformationGeneraleLabel.Location = new Point(138, 101);
+            InformationGeneraleLabel.Location = new Point(70, 89);
             InformationGeneraleLabel.Name = "InformationGeneraleLabel";
             InformationGeneraleLabel.Size = new Size(185, 28);
             InformationGeneraleLabel.TabIndex = 1;
@@ -47,10 +47,11 @@
             ClientSize = new Size(772, 639);
             Controls.Add(InformationGeneraleLabel);
             Font = new Font("Segoe UI", 12F);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
+            MinimumSize = new Size(790, 686);
             Name = "CommentaireForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CommentaireForm";
+            Text = "Commentaire";
             ResumeLayout(false);
             PerformLayout();
         }

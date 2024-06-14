@@ -57,33 +57,33 @@
             // 
             // ExportEleve
             // 
-            ExportEleve.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ExportEleve.Anchor = AnchorStyles.Bottom;
             ExportEleve.Location = new Point(51, 500);
             ExportEleve.Name = "ExportEleve";
-            ExportEleve.Size = new Size(194, 44);
+            ExportEleve.Size = new Size(194, 55);
             ExportEleve.TabIndex = 8;
             ExportEleve.Text = "Exporter élèves";
             ExportEleve.UseVisualStyleBackColor = true;
             // 
             // SupprinerEleve
             // 
-            SupprinerEleve.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            SupprinerEleve.Anchor = AnchorStyles.Bottom;
             SupprinerEleve.BackColor = Color.IndianRed;
             SupprinerEleve.ForeColor = Color.White;
             SupprinerEleve.Location = new Point(276, 500);
             SupprinerEleve.Name = "SupprinerEleve";
-            SupprinerEleve.Size = new Size(194, 44);
+            SupprinerEleve.Size = new Size(194, 55);
             SupprinerEleve.TabIndex = 9;
             SupprinerEleve.Text = "Supprimer élèves";
             SupprinerEleve.UseVisualStyleBackColor = false;
             // 
             // AjouterBtn
             // 
-            AjouterBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            AjouterBtn.Anchor = AnchorStyles.Bottom;
             AjouterBtn.BackColor = SystemColors.GradientActiveCaption;
             AjouterBtn.Location = new Point(499, 500);
             AjouterBtn.Name = "AjouterBtn";
-            AjouterBtn.Size = new Size(194, 44);
+            AjouterBtn.Size = new Size(194, 55);
             AjouterBtn.TabIndex = 10;
             AjouterBtn.Text = "Ajouter un élève";
             AjouterBtn.UseVisualStyleBackColor = false;
@@ -153,14 +153,14 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(224, 26);
+            exitToolStripMenuItem.Size = new Size(201, 26);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // parcourirClassesToolStripMenuItem
             // 
             parcourirClassesToolStripMenuItem.Name = "parcourirClassesToolStripMenuItem";
-            parcourirClassesToolStripMenuItem.Size = new Size(224, 26);
+            parcourirClassesToolStripMenuItem.Size = new Size(201, 26);
             parcourirClassesToolStripMenuItem.Text = "&Parcourir Classes";
             parcourirClassesToolStripMenuItem.Click += parcourirClassesToolStripMenuItem_Click;
             // 
@@ -183,9 +183,10 @@
             Controls.Add(dataGridView1);
             Font = new Font("Segoe UI", 12F);
             Margin = new Padding(4);
+            MinimumSize = new Size(790, 686);
             Name = "GererEleveForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ElevesForm";
+            Text = "Gérer les Eleves";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

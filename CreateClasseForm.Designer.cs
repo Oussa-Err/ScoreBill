@@ -46,6 +46,7 @@
             FraisInitial = new TextBox();
             label2 = new Label();
             FraisMensuel = new TextBox();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // CreateClasseBtn
             // 
-            CreateClasseBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CreateClasseBtn.Anchor = AnchorStyles.Top;
             CreateClasseBtn.BackColor = SystemColors.GradientActiveCaption;
             CreateClasseBtn.Location = new Point(469, 513);
             CreateClasseBtn.Name = "CreateClasseBtn";
@@ -93,7 +94,7 @@
             // 
             // AnnulerBtn
             // 
-            AnnulerBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            AnnulerBtn.Anchor = AnchorStyles.Top;
             AnnulerBtn.BackColor = Color.IndianRed;
             AnnulerBtn.ForeColor = Color.White;
             AnnulerBtn.Location = new Point(92, 513);
@@ -212,11 +213,25 @@
             FraisMensuel.Size = new Size(211, 34);
             FraisMensuel.TabIndex = 5;
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Right;
+            button1.Font = new Font("Segoe UI", 16F);
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(660, 162);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Size = new Size(52, 46);
+            button1.TabIndex = 14;
+            button1.Text = "+";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // CreateClasseForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(772, 639);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(FraisMensuel);
             Controls.Add(label1);
@@ -235,9 +250,10 @@
             Font = new Font("Segoe UI", 12F);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
+            MinimumSize = new Size(790, 686);
             Name = "CreateClasseForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CreateClasse";
+            Text = "Creer une Classe";
             Load += CreateClasse_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -265,5 +281,6 @@
         private TextBox FraisInitial;
         private Label label2;
         private TextBox FraisMensuel;
+        private Button button1;
     }
 }
