@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,14 @@ namespace scoreBill
         public CreateClasseForm()
         {
             InitializeComponent();
+            roundShapeBtn();
+        }
+
+        private void roundShapeBtn()
+        {
+            GraphicsPath path = new ();
+            path.AddEllipse(0, 0, plusBtn.Width - 20, plusBtn.Height - 15);
+            plusBtn.Region = new Region(path);
         }
 
         private void CreateClasse_Load(object sender, EventArgs e)
@@ -28,10 +38,10 @@ namespace scoreBill
             elevesForm.Show();
             this.Close();
         }
-        
+
         private void AnnulerBtn_Click(object sender, EventArgs e)
         {
-            GererClasseForm getClassesForm = new ();
+            GererClasseForm getClassesForm = new();
             getClassesForm.Show();
             this.Close();
         }
@@ -40,6 +50,6 @@ namespace scoreBill
         {
             Application.Exit();
         }
-
+        
     }
 }

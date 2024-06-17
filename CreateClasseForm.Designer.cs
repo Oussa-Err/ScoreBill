@@ -46,7 +46,7 @@
             FraisInitial = new TextBox();
             label2 = new Label();
             FraisMensuel = new TextBox();
-            button1 = new Button();
+            plusBtn = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -213,25 +213,27 @@
             FraisMensuel.Size = new Size(211, 34);
             FraisMensuel.TabIndex = 5;
             // 
-            // button1
+            // plusBtn
             // 
-            button1.Anchor = AnchorStyles.Right;
-            button1.Font = new Font("Segoe UI", 16F);
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(660, 162);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(52, 46);
-            button1.TabIndex = 14;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = false;
+            plusBtn.Anchor = AnchorStyles.Right;
+            plusBtn.BackColor = SystemColors.ActiveCaption;
+            plusBtn.FlatStyle = FlatStyle.Popup;
+            plusBtn.Font = new Font("Segoe UI", 16F);
+            plusBtn.Location = new Point(660, 153);
+            plusBtn.Margin = new Padding(0);
+            plusBtn.Name = "plusBtn";
+            plusBtn.Size = new Size(59, 54);
+            plusBtn.TabIndex = 14;
+            plusBtn.Text = "+";
+            plusBtn.TextAlign = ContentAlignment.TopCenter;
+            plusBtn.UseVisualStyleBackColor = false;
             // 
             // CreateClasseForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(772, 639);
-            Controls.Add(button1);
+            Controls.Add(plusBtn);
             Controls.Add(label2);
             Controls.Add(FraisMensuel);
             Controls.Add(label1);
@@ -281,6 +283,6 @@
         private TextBox FraisInitial;
         private Label label2;
         private TextBox FraisMensuel;
-        private Button button1;
+        private Button plusBtn;
     }
 }
