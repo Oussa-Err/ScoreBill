@@ -1,4 +1,5 @@
-﻿using System;
+﻿using scoreBill.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace scoreBill
 {
@@ -19,9 +21,8 @@ namespace scoreBill
 
         private void AjouterClasseClick(object sender, EventArgs e)
         {
-            CreateClasseForm createClasseForm = new();
-            createClasseForm.Show();
-            this.Close();
+            CreateClasseForm createClasseForm = new ();
+            FormPositionUtil.OpenNewForm(this, createClasseForm);
         }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using scoreBill.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,15 +36,14 @@ namespace scoreBill
         private void CreateClasseBtn_Click(object sender, EventArgs e)
         {
             GererEleveForm elevesForm = new();
-            elevesForm.Show();
-            this.Close();
+            FormPositionUtil.OpenNewForm(this, elevesForm);
         }
 
         private void AnnulerBtn_Click(object sender, EventArgs e)
         {
             GererClasseForm getClassesForm = new();
-            getClassesForm.Show();
-            this.Close();
+            FormPositionUtil.OpenNewForm(this, getClassesForm);
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

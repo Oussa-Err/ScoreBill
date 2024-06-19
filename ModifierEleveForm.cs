@@ -1,4 +1,5 @@
-﻿using System;
+﻿using scoreBill.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,8 +45,7 @@ namespace scoreBill
         private void parcourirClassesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GererClasseForm gererClasseForm = new();
-            gererClasseForm.Show();
-            this.Close();
+            FormPositionUtil.OpenNewForm(this, gererClasseForm);
         }
 
         private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace scoreBill
         private void parcourirElevesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             GererEleveForm gererEleveForm = new();
-            gererEleveForm.Show();
+            FormPositionUtil.OpenNewForm(this, gererEleveForm);
         }
     }
 }

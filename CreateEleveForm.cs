@@ -1,4 +1,5 @@
-﻿using System;
+﻿using scoreBill.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,32 +22,28 @@ namespace scoreBill
         {
             this.Close();
             GererEleveForm gererEleveForm = new();
-            gererEleveForm.Show();
+            FormPositionUtil.OpenNewForm(this, gererEleveForm);
         }
 
         private void parcourirClassesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GererClasseForm gererClasseForm = new();
-            gererClasseForm.Show();
-            this.Close();
+            FormPositionUtil.OpenNewForm(this, gererClasseForm);
         }
         private void parcourirElevesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GererEleveForm gererEleveForm = new();
-            gererEleveForm.Show();
-            this.Close();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            FormPositionUtil.OpenNewForm(this, gererEleveForm);
         }
 
         private void EnregistrerBtn_Click(object sender, EventArgs e)
         {
             ModifierEleveForm modifierEleveForm = new();
-            modifierEleveForm.Show();
-            this.Close();
+            FormPositionUtil.OpenNewForm(this, modifierEleveForm);
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

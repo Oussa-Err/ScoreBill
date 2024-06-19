@@ -254,7 +254,7 @@
             Margin = new Padding(4);
             MinimumSize = new Size(790, 686);
             Name = "CreateClasseForm";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "Creer une Classe";
             Load += CreateClasse_Load;
             menuStrip1.ResumeLayout(false);
