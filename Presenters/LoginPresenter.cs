@@ -10,6 +10,11 @@ namespace scoreBill.Presenters
 {
     public class LoginPresenter
     {
+
+
+        public string login { get; set; }
+        public string password { get; set; }
+
         ILogin loginUser;
         public LoginPresenter(ILogin login)
         {

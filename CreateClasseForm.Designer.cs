@@ -36,17 +36,17 @@
             AnnulerBtn = new Button();
             NomClasse = new TextBox();
             NomClasseLabel = new Label();
-            NomMatiereLabel = new Label();
-            NomsMatiere = new TextBox();
-            NbrMatiereLabel = new Label();
-            NbrMatiere = new TextBox();
             NbrMoisLabel = new Label();
             NbrMois = new TextBox();
             label1 = new Label();
             FraisInitial = new TextBox();
             label2 = new Label();
             FraisMensuel = new TextBox();
+            NomMatiereLabel = new Label();
+            Module = new TextBox();
             plusBtn = new Button();
+            NbrMatiereLabel = new Label();
+            NbrMatiere = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(772, 28);
+            menuStrip1.Size = new Size(1469, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +84,7 @@
             // 
             CreateClasseBtn.Anchor = AnchorStyles.Top;
             CreateClasseBtn.BackColor = SystemColors.GradientActiveCaption;
-            CreateClasseBtn.Location = new Point(469, 513);
+            CreateClasseBtn.Location = new Point(817, 513);
             CreateClasseBtn.Name = "CreateClasseBtn";
             CreateClasseBtn.Size = new Size(164, 49);
             CreateClasseBtn.TabIndex = 7;
@@ -97,7 +97,7 @@
             AnnulerBtn.Anchor = AnchorStyles.Top;
             AnnulerBtn.BackColor = Color.IndianRed;
             AnnulerBtn.ForeColor = Color.White;
-            AnnulerBtn.Location = new Point(92, 513);
+            AnnulerBtn.Location = new Point(440, 513);
             AnnulerBtn.Name = "AnnulerBtn";
             AnnulerBtn.Size = new Size(164, 49);
             AnnulerBtn.TabIndex = 6;
@@ -107,10 +107,10 @@
             // 
             // NomClasse
             // 
-            NomClasse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NomClasse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NomClasse.Location = new Point(422, 102);
             NomClasse.Name = "NomClasse";
-            NomClasse.Size = new Size(211, 34);
+            NomClasse.Size = new Size(908, 34);
             NomClasse.TabIndex = 0;
             // 
             // NomClasseLabel
@@ -122,42 +122,6 @@
             NomClasseLabel.Size = new Size(158, 28);
             NomClasseLabel.TabIndex = 3;
             NomClasseLabel.Text = "Nom de la classe";
-            // 
-            // NomMatiereLabel
-            // 
-            NomMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            NomMatiereLabel.AutoSize = true;
-            NomMatiereLabel.Location = new Point(92, 162);
-            NomMatiereLabel.Name = "NomMatiereLabel";
-            NomMatiereLabel.Size = new Size(155, 28);
-            NomMatiereLabel.TabIndex = 5;
-            NomMatiereLabel.Text = "Nom du matière";
-            // 
-            // NomsMatiere
-            // 
-            NomsMatiere.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            NomsMatiere.Location = new Point(422, 162);
-            NomsMatiere.Name = "NomsMatiere";
-            NomsMatiere.Size = new Size(211, 34);
-            NomsMatiere.TabIndex = 1;
-            // 
-            // NbrMatiereLabel
-            // 
-            NbrMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            NbrMatiereLabel.AutoSize = true;
-            NbrMatiereLabel.Location = new Point(92, 227);
-            NbrMatiereLabel.Name = "NbrMatiereLabel";
-            NbrMatiereLabel.Size = new Size(279, 28);
-            NbrMatiereLabel.TabIndex = 7;
-            NbrMatiereLabel.Text = "Nombre d'examen par matière";
-            // 
-            // NbrMatiere
-            // 
-            NbrMatiere.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            NbrMatiere.Location = new Point(422, 227);
-            NbrMatiere.Name = "NbrMatiere";
-            NbrMatiere.Size = new Size(211, 34);
-            NbrMatiere.TabIndex = 2;
             // 
             // NbrMoisLabel
             // 
@@ -171,10 +135,10 @@
             // 
             // NbrMois
             // 
-            NbrMois.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NbrMois.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NbrMois.Location = new Point(422, 285);
             NbrMois.Name = "NbrMois";
-            NbrMois.Size = new Size(211, 34);
+            NbrMois.Size = new Size(908, 34);
             NbrMois.TabIndex = 3;
             // 
             // label1
@@ -189,10 +153,10 @@
             // 
             // FraisInitial
             // 
-            FraisInitial.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FraisInitial.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             FraisInitial.Location = new Point(422, 348);
             FraisInitial.Name = "FraisInitial";
-            FraisInitial.Size = new Size(211, 34);
+            FraisInitial.Size = new Size(908, 34);
             FraisInitial.TabIndex = 4;
             // 
             // label2
@@ -207,11 +171,28 @@
             // 
             // FraisMensuel
             // 
-            FraisMensuel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FraisMensuel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             FraisMensuel.Location = new Point(422, 411);
             FraisMensuel.Name = "FraisMensuel";
-            FraisMensuel.Size = new Size(211, 34);
+            FraisMensuel.Size = new Size(908, 34);
             FraisMensuel.TabIndex = 5;
+            // 
+            // NomMatiereLabel
+            // 
+            NomMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NomMatiereLabel.AutoSize = true;
+            NomMatiereLabel.Location = new Point(92, 165);
+            NomMatiereLabel.Name = "NomMatiereLabel";
+            NomMatiereLabel.Size = new Size(88, 28);
+            NomMatiereLabel.TabIndex = 5;
+            NomMatiereLabel.Text = "Modules";
+            // 
+            // Module
+            // 
+            Module.Location = new Point(422, 162);
+            Module.Name = "Module";
+            Module.Size = new Size(211, 34);
+            Module.TabIndex = 1;
             // 
             // plusBtn
             // 
@@ -219,7 +200,7 @@
             plusBtn.BackColor = SystemColors.ActiveCaption;
             plusBtn.FlatStyle = FlatStyle.Popup;
             plusBtn.Font = new Font("Segoe UI", 16F);
-            plusBtn.Location = new Point(660, 153);
+            plusBtn.Location = new Point(1357, 153);
             plusBtn.Margin = new Padding(0);
             plusBtn.Name = "plusBtn";
             plusBtn.Size = new Size(59, 54);
@@ -227,12 +208,33 @@
             plusBtn.Text = "+";
             plusBtn.TextAlign = ContentAlignment.TopCenter;
             plusBtn.UseVisualStyleBackColor = false;
+            plusBtn.Click += plusBtn_Click;
+            // 
+            // NbrMatiereLabel
+            // 
+            NbrMatiereLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NbrMatiereLabel.AutoSize = true;
+            NbrMatiereLabel.Location = new Point(92, 227);
+            NbrMatiereLabel.Name = "NbrMatiereLabel";
+            NbrMatiereLabel.Size = new Size(312, 28);
+            NbrMatiereLabel.TabIndex = 7;
+            NbrMatiereLabel.Text = "Nombre des controles par module";
+            // 
+            // NbrMatiere
+            // 
+            NbrMatiere.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NbrMatiere.Location = new Point(422, 227);
+            NbrMatiere.Name = "NbrMatiere";
+            NbrMatiere.Size = new Size(908, 34);
+            NbrMatiere.TabIndex = 2;
             // 
             // CreateClasseForm
             // 
+            AcceptButton = CreateClasseBtn;
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(772, 639);
+            CancelButton = AnnulerBtn;
+            ClientSize = new Size(1469, 697);
             Controls.Add(plusBtn);
             Controls.Add(label2);
             Controls.Add(FraisMensuel);
@@ -243,7 +245,7 @@
             Controls.Add(NbrMatiereLabel);
             Controls.Add(NbrMatiere);
             Controls.Add(NomMatiereLabel);
-            Controls.Add(NomsMatiere);
+            Controls.Add(Module);
             Controls.Add(NomClasseLabel);
             Controls.Add(NomClasse);
             Controls.Add(AnnulerBtn);
@@ -252,11 +254,11 @@
             Font = new Font("Segoe UI", 12F);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
-            MinimumSize = new Size(790, 686);
+            MinimizeBox = false;
+            MinimumSize = new Size(1487, 715);
             Name = "CreateClasseForm";
             StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "Creer une Classe";
-            Load += CreateClasse_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -273,16 +275,16 @@
         private Button AnnulerBtn;
         private TextBox NomClasse;
         private Label NomClasseLabel;
-        private Label NomMatiereLabel;
-        private TextBox NomsMatiere;
-        private Label NbrMatiereLabel;
-        private TextBox NbrMatiere;
         private Label NbrMoisLabel;
         private TextBox NbrMois;
         private Label label1;
         private TextBox FraisInitial;
         private Label label2;
         private TextBox FraisMensuel;
+        private Label NomMatiereLabel;
+        private TextBox Module;
         private Button plusBtn;
+        private Label NbrMatiereLabel;
+        private TextBox NbrMatiere;
     }
 }
