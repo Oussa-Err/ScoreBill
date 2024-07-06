@@ -47,7 +47,7 @@
             // LoginBox1
             // 
             LoginBox1.AccessibleDescription = "";
-            LoginBox1.AccessibleName = "login";
+            LoginBox1.AccessibleName = "";
             LoginBox1.Anchor = AnchorStyles.None;
             LoginBox1.Location = new Point(218, 304);
             LoginBox1.Margin = new Padding(4);
@@ -89,6 +89,7 @@
             signInBtn.Name = "signInBtn";
             signInBtn.Size = new Size(219, 51);
             signInBtn.TabIndex = 2;
+            signInBtn.TabStop = false;
             signInBtn.Text = "s'authentifier";
             signInBtn.UseVisualStyleBackColor = false;
             signInBtn.Click += LoginClick;
@@ -112,7 +113,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(663, 30);
+            menuStrip1.Size = new Size(679, 30);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -150,11 +151,12 @@
             // 
             // LoginForm
             // 
+            AcceptButton = signInBtn;
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(663, 573);
+            ClientSize = new Size(679, 618);
             ControlBox = false;
             Controls.Add(label1);
             Controls.Add(espegicLogo);

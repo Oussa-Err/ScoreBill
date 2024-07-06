@@ -22,5 +22,17 @@ namespace scoreBill.Utils
 
             currentForm.Hide();
         }
+
+        protected void HandleError(Exception ex)
+        {
+            if (string.IsNullOrEmpty(ex.Message))
+            {
+                MessageBox.Show("An error occurred.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

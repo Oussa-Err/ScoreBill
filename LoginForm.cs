@@ -1,38 +1,36 @@
 using scoreBill.Presenters;
+using scoreBill.Utils;
 using scoreBill.Views;
-using Presenters.
 
 namespace scoreBill
 {
     public partial class LoginForm : Form
-        //, ILogin
     {
-        //string ILogin.Login { get => LoginBox1.Text; set => LoginBox1.Text = value; }
-
-        //string ILogin.Password { get => PasswordBox1.Text; set => PasswordBox1.Text = value; }
+        private readonly LoginPresenter _presenter;
 
         public LoginForm()
         {
             InitializeComponent();
+            _presenter = new LoginPresenter();
         }
 
         private void LoginClick(object sender, EventArgs e)
         {
-            if (PasswordBox1.Text == "" || LoginBox1.Text == "")
-            {
-                MessageBox.Show("login et/ou mot de passe vide\n", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                //LoginPresenter presenter = new();
-                //presenter.logUser(this);
+                if (string.IsNullOrEmpty(LoginBox1.Text) || string.IsNullOrEmpty(PasswordBox1.Text))
+                {
+                    MessageBox.Show("login et/ou mot de passe vide\n", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // montrer GererClasseForm et 
-                GererClasseForm classesForm = new();
-                classesForm.Show();
-                this.Visible = false;
-            }
+                string login = LoginBox1.Text;
+                string password = PasswordBox1.Text;
 
+               if (_presenter.ValidateLogin(login, password))
+                {
+                    GererClasseForm gererClasseForm = new();
+                    FormPositionUtil.OpenNewForm(this, gererClasseForm);
+                    MessageBox.Show("bienvenue", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
