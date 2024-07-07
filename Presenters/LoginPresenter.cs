@@ -17,7 +17,6 @@ namespace scoreBill.Presenters
         public DbConnection db = new();
         public bool ValidateLogin(string login, string password)
         {
-            using SqlConnection conn = db.GetConn();
             try
             {
                 SqlCommand cmd = new()
@@ -30,6 +29,10 @@ namespace scoreBill.Presenters
 
                 int count = (int)db.ExecScalar(cmd);
                 bool isLoggedIn = count > 0;
+                if (count == 0) {
+                    MessageBox.Show("login et / ou mot de passe incorrecte\n", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 return isLoggedIn;
             }
             catch (Exception ex) 

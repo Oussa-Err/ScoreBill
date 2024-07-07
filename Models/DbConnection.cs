@@ -10,7 +10,7 @@ namespace scoreBill.Models
 {
     public class DbConnection
     {
-        public SqlConnection conn = new("Data Source=MAGIQUE;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
+        public SqlConnection conn = new("Data Source=magique;Initial Catalog=ESPEGIC;Integrated Security=True;TrustServerCertificate=True");
         public SqlConnection GetConn()
         {
             if (conn.State == ConnectionState.Closed)
