@@ -1,0 +1,120 @@
+ USE ESPEGIC
+GO
+
+DROP TABLE IF EXISTS MatiereNote;
+DROP TABLE IF EXISTS ExamenMatiere;
+DROP TABLE IF EXISTS Note;
+DROP TABLE IF EXISTS Matiere;
+DROP TABLE IF EXISTS EleveConfig;
+DROP TABLE IF EXISTS ClasseConfig;
+DROP TABLE IF EXISTS Paiement;
+DROP TABLE IF EXISTS Examen;
+DROP TABLE IF EXISTS Eleve; 
+DROP TABLE IF EXISTS Classe;
+DROP TABLE IF EXISTS Admin;
+
+CREATE TABLE Classe (  
+  ID INT PRIMARY KEY IDENTITY,
+  Titre VARCHAR(50) NOT NULL UNIQUE,
+)
+
+CREATE TABLE Eleve ( 
+  ID INT PRIMARY KEY IDENTITY,
+  Nom VARCHAR(40) NOT NULL,
+  Prenom VARCHAR(40) NOT NULL,
+  Genre VARCHAR(40) NOT NULL,
+  Age VARCHAR(40) NOT NULL,
+  Telephone VARCHAR(40) NOT NULL,
+  ClasseID INT NOT NULL REFERENCES Classe(ID),
+  DateInscription DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  Moyenne DECIMAL(5, 2),
+  ResteApayer INT,
+  MoisNonPayer INT,
+  CONSTRAINT CK_Eleve_Age CHECK(Age > 0 AND Age < 50)
+)
+
+CREATE TABLE NombreExamen (
+  ID INT PRIMARY KEY IDENTITY,
+  NbrExamen INT NOT NULL,
+)
+
+CREATE TABLE Coef (
+  ID INT PRIMARY KEY IDENTITY,
+  Coefficient INT NOT NULL,
+)
+
+CREATE TABLE ExamenFF(
+  ID INT PRIMARY KEY IDENTITY,
+  Note INT NOT NULL,
+)
+
+CREATE TABLE Module (
+  ID INT PRIMARY KEY IDENTITY,
+  Module VARCHAR(30) NOT NULL,
+)
+
+CREATE TABLE MoyenneAnnee (
+  ID INT PRIMARY KEY IDENTITY,
+  PremierAnneeMoyenne VARCHAR(30) NOT NULL,
+  DeuxiemeAnneeMoyenne VARCHAR(30) NOT NULL,
+  ExamenFF INT REFERENCES ExamenFF(ID) 
+)
+
+CREATE TABLE Note (
+  ID INT PRIMARY KEY IDENTITY,
+  Note DECIMAL(5, 2) NOT NULL DEFAULT 0,
+)
+
+CREATE TABLE MatiereNote(
+	MatiereID INT NOT NULL,
+	NoteID INT NOT NULL,
+	CONSTRAINT FK_MatiereNote_Matiere FOREIGN KEY (MatiereID) REFERENCES Matiere(ID),
+	CONSTRAINT FK_MatiereNote_Note FOREIGN KEY (NoteID) REFERENCES Note(ID),
+	CONSTRAINT PK_MatiereNote PRIMARY KEY (MatiereID, NoteID),
+);
+
+CREATE TABLE ExamenMatiere (
+  ExamenID INT NOT NULL,
+  ModuleID INT NOT NULL,
+  CONSTRAINT FK_ExamenMatiere_Examen FOREIGN KEY (ExamenID) REFERENCES Module(ID),
+  CONSTRAINT FK_ExamenMatiere_Matiere FOREIGN KEY (ModuleID) REFERENCES Module(ID),
+  CONSTRAINT PK_ExamenMatiere PRIMARY KEY (ExamenID, ModuleID)
+);
+
+/* les informations necessaire pour calculez 
+le paiement des frais scolaire*/
+CREATE TABLE Paiement ( 
+  ID INT NOT NULL PRIMARY KEY IDENTITY,
+  FraisInitial INT NOT NULL,
+  FraisMensuel INT NOT NULL,
+  NbrMois INT NOT NULL,
+)
+
+/* Pour avoir une configuration
+globle de la classe */
+CREATE TABLE ClasseConfig ( 
+  ClasseID INT NOT NULL,
+  ModuleID INT NOT NULL,
+  PaiementID INT NOT NULL,
+  CONSTRAINT FK_ClasseConfig_Classe FOREIGN KEY(ClasseID) REFERENCES Classe(ID),
+  CONSTRAINT FK_ExamenClasse_Eleve FOREIGN KEY(ModuleID) REFERENCES Module(ID),
+  CONSTRAINT FK_PaiementClasse_Paiement FOREIGN KEY(PaiementID) REFERENCES Paiement(ID),
+  CONSTRAINT PK_ClasseConfig PRIMARY KEY(PaiementID, ModuleID)
+)
+
+/* Pour personaliser chaque eleve afin de
+gerer ses Paiements et Notes */
+CREATE TABLE EleveConfig ( 
+  EleveID INT NOT NULL,
+  ModuleID INT NOT NULL,
+  PaiementID INT NOT NULL,
+  CONSTRAINT FK_EleveConfig_Eleve FOREIGN KEY(EleveID) REFERENCES Eleve(ID),
+  CONSTRAINT FK_ExamenEleve_Examen FOREIGN KEY(ModuleID) REFERENCES Module(ID),
+  CONSTRAINT FK_PaiementEleve_Paiement FOREIGN KEY(PaiementID) REFERENCES Paiement(ID),
+  CONSTRAINT PK_EleveConfig PRIMARY KEY(PaiementID, ModuleID)
+)
+
+CREATE TABLE Admin (
+	Password VARCHAR(50) NOT NULL UNIQUE,
+	Login VARCHAR(50) NOT NULL UNIQUE
+)
